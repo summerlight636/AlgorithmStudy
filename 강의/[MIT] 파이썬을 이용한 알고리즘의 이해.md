@@ -29,3 +29,7 @@
 - T(n, m) = T(n, m/2) + θ(n)
 - base case: T(n, 1) = θ(n) 
 - T(n, m) = θ(n) + ... + θ(n) = θ(nlog2 m)
+
+
+## Models of Computaition
+### 
