@@ -9,9 +9,9 @@
 - Shortest Paths: Caltech -> MIT
 - Dynamic Programming: Image Compression 
 - Advance topics: .... 
-
-
-
+<br>
+<br>
+<br>
 # 1. Introduction
 ## 1-1 Peak finding
 ### one-dimensional version
