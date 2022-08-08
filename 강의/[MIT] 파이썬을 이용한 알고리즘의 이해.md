@@ -32,7 +32,7 @@
 - T(n, m) = θ(n) + ... + θ(n) = θ(nlog2 m)
 
 
-## 1-2 Models of Computaition
+## 1-2 Models of Computation
 ### 표기법
 - 빅오 표기법(O(n)): 최악의 경우
 - 빅오메가 표기법(Ω(n)): 최선의 경우
