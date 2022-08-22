@@ -18,8 +18,7 @@ for i in range(1, n+1):
         if count == k:
             print(i)
             break
-
-if count < k:
+else: #break에 의해 중단되지않고 끝까지 도는 경우 for-else 구문 사용
     print(-1)
 
 
