@@ -9,11 +9,12 @@
 - Shortest Paths: Caltech -> MIT
 - Dynamic Programming: Image Compression 
 - Advance topics: .... 
-
-
+<br>
+<br>
+<br>
 
 # 1. Introduction
-## Peak finding
+## 1-1 Peak finding
 ### one-dimensional version
 - divide&conquer(분할정복) 
 - T(n) : "work" algo does on input of size n 
@@ -29,3 +30,13 @@
 - T(n, m) = T(n, m/2) + θ(n)
 - base case: T(n, 1) = θ(n) 
 - T(n, m) = θ(n) + ... + θ(n) = θ(nlog2 m)
+
+
+## 1-2 Models of Computation
+### 표기법
+- 빅오 표기법(O(n)): 최악의 경우
+- 빅오메가 표기법(Ω(n)): 최선의 경우
+- 빅세타 표기법(θ(n)): 평균의 경우(빅오, 빅오메가가 같을 때...)
+
+### 강의노트에서
+- 각 연산마다 시간 얼마 걸리는지 . 
