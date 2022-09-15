@@ -11,8 +11,19 @@ cnt = 0
 while lst:
     x = lst.pop(0)
     cnt += 1
+    if len(lst) != 0:
+        if lst[-1] + x <= m:
+            lst.pop()
+print(cnt)
+
+'''
+cnt = 0
+while lst:
+    x = lst.pop(0)
+    cnt += 1
     for i, v in enumerate(lst):
         if v <= m-x:
             lst.pop(i)
             break
 print(cnt)
+'''
