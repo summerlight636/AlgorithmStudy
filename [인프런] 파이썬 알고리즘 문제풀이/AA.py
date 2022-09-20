@@ -1,19 +1,11 @@
-#리스트 회문: tmp == tmp[::-1] 이용할 수 있음!!(가로 방향만 가능)
-#if k==1: cnt += 1 같이 하지말고, break 안된 경우를 말하는 else: 문 사용
-mtx = [list(map(int, input().split())) for _ in range(7)]
-
-cnt = 0
-for i in range(7):
-    for j in range(3):
-        for k in range(2):
-            if mtx[i][j+k] != mtx[i][j+4-k]:
-                break
-        else:
-            cnt += 1
-        for k in range(2):
-            if mtx[j+k][i] != mtx[j+4-k][i] :
-                break
-        else:
-            cnt += 1
-
-print(cnt)
+#재귀함수로 탐색할 때 함수이름을 DFS로.
+#거꾸로 출력하려면 호출 밑으로 내려주면 거꾸로 출력된다. (스택을 사용하는 것이므로)
+#안했던 일을 하러 다시 온다는 의미에서 백트래킹이라고도 한다.
+n = int(input())
+def DFS(n):
+    if n==0:
+        return
+    else:
+        DFS(n//2)
+        print(n%2, end='')
+DFS(n)
