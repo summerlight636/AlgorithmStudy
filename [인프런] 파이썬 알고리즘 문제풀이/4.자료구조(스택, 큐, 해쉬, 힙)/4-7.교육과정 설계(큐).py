@@ -23,3 +23,34 @@ for i, x in enumerate(lst):
             print("#%d YES" %(i+1))
         else:
             print("#%d NO" %(i+1))
+
+#4-7 교육과정설계 다시 풀기
+#12:23 ~ 12:51
+
+from collections import deque
+
+str = input()
+n = int(input())
+
+for i in range(n):
+    answer = ""
+    target = deque()
+    for x in str:
+        target.append(x)
+
+    lst = input()
+    for x in lst:
+        if len(target) == 0:
+            answer = "YES"
+            break
+        if x == target[0]:
+            target.popleft()
+        elif x in target and x != target[0]:
+            answer = "NO"
+            break
+
+    if not answer:
+        answer = "YES"
+    if len(target) != 0: #미달을 생각을 못했다. (예외 케이스 생각 못함)
+        answer = "NO"
+    print("#%d " %(i+1) + answer)
