@@ -4,14 +4,22 @@ import sys
 #이전 단계(level)의 결과가 그대로 다음 단계에 영향을 줄 때 매개변수로 넘겨주자.
 #나눠진 두 값이 같다: sum == total-sum 과 같이 표현하는 게 제일 깔끔하다.
 #if sum>total//2: return 추가
+
 def DFS(l, sum):
-    if sum>total//2:
+    if sum > total//2:
         return
     if l == n:
         if sum == total - sum:
             print("YES")
             sys.exit(0)
     else:
+        '''
+        sum += lst[l]
+        DFS(l+1)
+        sum -= lst[l]
+        DFS(l+1) 과 완전히 똑같다. (아래 코드 참고) 
+        '''
+
         DFS(l+1, sum+lst[l]) #상태트리의 왼쪽으로 이동
         DFS(l+1, sum) #상태트리의 오른쪽으로 이동
 
@@ -20,6 +28,28 @@ lst = list(map(int, input().split()))
 total = sum(lst)
 DFS(0, 0)
 print("NO")
+
+# def DFS(l):
+#     global sumv
+#     if sumv > total // 2:
+#         return
+#     if l == n:
+#         if sumv == total - sumv:
+#             print("YES")
+#             sys.exit(0)
+#     else:
+#         sumv += lst[l]
+#         DFS(l+1)
+#         sumv -= lst[l]
+#         DFS(l+1)
+#
+# n = int(input())
+# lst = list(map(int, input().split()))
+# total = sum(lst)
+# sumv = 0
+# DFS(0)
+# print("NO")
+
 
 ''' 내 코드 
 #YES 여러번 출력되어 실패 - sys.exit(0) 적용하여 해결
