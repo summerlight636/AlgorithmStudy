@@ -1,5 +1,6 @@
 #한 칸 = dfs(l+1), 두 칸 = dfs(l+2)
 #마지막 index 넘는 거 code.insert(n, -1) 으로 표현
+#chr() 으로 문자로 변환
 
 import sys
 sys.stdin=open("input.txt", "r")
