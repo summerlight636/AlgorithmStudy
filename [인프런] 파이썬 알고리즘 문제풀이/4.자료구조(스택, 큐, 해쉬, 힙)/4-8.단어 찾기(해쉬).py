@@ -1,6 +1,6 @@
 # 해쉬!
 # note = dict()
-# for key, val in p.items():
+# for key, val in note.items():
 n = int(input())
 note = dict()
 for i in range(n):
