@@ -1,12 +1,7 @@
-# 임포트
-
 # 입력
 n = int(input())
 a = list(map(int, input().split()))
 
-# 상수
-
-# 알고리즘
 # 평균 구하기
 # list의 평균은 avg(arr)/len(arr)
 # 소수 첫째 자리에서 반올림: round
